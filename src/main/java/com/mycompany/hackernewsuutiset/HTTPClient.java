@@ -10,8 +10,10 @@ import java.nio.charset.Charset;
 
 public class HTTPClient {
     public static String callURL(String URLString) {
+                System.out.println("");
 		StringBuilder sb = new StringBuilder();
 		URLConnection urlConn = null;
+                System.out.println("");
 		InputStreamReader in = null;
 		try {
 			URL url = new URL(URLString);
@@ -31,6 +33,7 @@ public class HTTPClient {
 				}
 			}
 		in.close();
+                System.out.println("");
 		} catch (Exception e) {
 			throw new RuntimeException("Virhe hakiessa osoitteesta: "+ URLString, e);
 		} 
